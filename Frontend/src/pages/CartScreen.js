@@ -11,7 +11,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import "./CartScreen.css";
 import { PayForm } from "../components/PayForm";
 
-const stripePromise = loadStripe('pk_test_51LT14qSGW55rxe8QJrenAL6Q5sd5uslEUDefytaWAS5UsltDuqZnSjjl2zyBMMKqlO6ZiZNQWNPowCDgVGieU4Jw00zCAOFByn');
+const stripePromise = loadStripe('YOUR_STRIPE_PUBLISHABLE_KEY');
 
 
 export const CartScreen = () => {
