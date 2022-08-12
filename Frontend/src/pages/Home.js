@@ -26,8 +26,8 @@ export const Home = () => {
             <h3 className='text-center'>Our Products</h3>
             {/* our products */}
                 <div className="d-flex justify-content-center flex-wrap">
-                    {ourProducts.map((product) => (
-                        <ProductCard {...product} />
+                    {ourProducts.map((product, index) => (
+                        <ProductCard {...product} key={index} />
                     ))}
                 </div>
                 <div>
@@ -38,8 +38,8 @@ export const Home = () => {
         <div className='recent-products-container container mt-4'>
                <h3 className='text-center'>Categories</h3>
                <Row>
-                {categories.map((category) => (
-                    <LinkContainer to={`/category/${category.name.toLocaleLowerCase()}`}>
+                {categories.map((category, index) => (
+                    <LinkContainer key={index} to={`/category/${category.name.toLocaleLowerCase()}`}>
                      <Col md={4}>
                         <div style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${category.image})`, gap: '10px'}} className='category-tile'>
                           {category.name}
