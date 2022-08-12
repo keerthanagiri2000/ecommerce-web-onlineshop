@@ -40,6 +40,7 @@ app.post('/create-payment', async (req, res) => {
     }
 })
 
-server.listen(5000, () => {
-    console.log('server running at port',5000)
-})
+const PORT = process.env.PORT;
+server.listen(PORT, () => {
+    console.log(`server running at port ${PORT}`)
+});
